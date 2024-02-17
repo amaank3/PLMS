@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Release Parking Spot</title>
+</head>
+<body>
+    <h1>Release Parking Spot {{ spot.id }}</h1>
+    <form method="post">
+        <input type="submit" value="Release Spot">
+    </form>
+    <a href="{{ url_for('index') }}">Back to list</a>
+</body>
+</html>

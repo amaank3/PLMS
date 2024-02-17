@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Parking Spot</title>
+</head>
+<body>
+    <h1>Book a Parking Spot</h1>
+
+    <!-- Display the number of available spots -->
+    <p>Available Spots: {{ available_spots }}</p>
+
+    <!-- Check if any spots are available -->
+    {% if available_spots > 0 %}
+        <form action="{{ url_for('book') }}" method="post">
+            <label for="car_type">Car Type:</label>
+            <input type="text" id="car_type" name="car_type" required><br><br>
+
+            <label for="plate_number">Plate Number:</label>
+            <input type="text" id="plate_number" name="plate_number" required><br><br>
+
+            <label for="booking_time">Time (Max 24 hours):</label>
+            <input type="number" id="booking_time" name="booking_time" min="1" max="24" required><br><br>
+
+            <input type="submit" value="Book">
+        </form>
+    {% else %}
+        <p>Sorry, all spots are currently taken.</p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

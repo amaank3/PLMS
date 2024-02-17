@@ -1,0 +1,68 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light grey background */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header, .footer {
+    background-color: #333; /* Dark background for header/footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header a, .footer a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.main-info {
+    background-color: #fff; /* White background for main content */
+    color: #333; /* Dark text color */
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
+}
+
+.main-info h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+.main-info p {
+    font-size: 1.2em;
+}
+
+/* Circular containers for location/contact */
+.circle-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.circle a {
+    color: white;
+    text-decoration: none;
+}

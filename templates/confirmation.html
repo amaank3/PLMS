@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Confirmation</title>
+</head>
+<body>
+    <h1>Congratulations!</h1>
+    <p>Your parking spot has been successfully booked.</p>
+    <p>Your booking details:</p>
+    <ul>
+        <li>Car Type & Model: {{ booking.car_type }}</li>
+        <li>Plate Number: {{ booking.plate_number }}</li>
+        <li>Time Booked: {{ booking.booking_time }} hours</li>
+        <li>Your PIN: {{ booking.pin }}</li>
+    </ul>
+    <a href="{{ url_for('dashboard') }}">Go to Dashboard</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parking Lot Management</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="{{ url_for('book') }}">Book Now</a>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('admin') }}">Admin</a>
+        </div>
+        <div class="main-info">
+            <h1>Welcome to Our Parking Lot</h1>
+            <p>Located in Central Champaign just Miles away from UIUC! $5 USD per hour and 100 USD for the entire day! Book your spot now!</p>
+        </div>
+        <div class="circle-container">
+            <div class="circle">Location<br>202 S 4th St</div>
+            <div class="circle">Contact<br>1234567890</div>
+        </div>
+        <div class="footer">
+            <a href="{{ url_for('index') }}">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+</head>
+<body>
+    <h1>User Dashboard</h1>
+
+    <!-- Form to enter PIN for dashboard access -->
+    <form action="{{ url_for('dashboard') }}" method="post">
+        <label for="pin">Enter your PIN:</label>
+        <input type="text" id="pin" name="pin" required><br><br>
+        <input type="submit" value="Access Dashboard">
+    </form>
+
+    <!-- Display booking details if available -->
+    {% if booking %}
+        <h2>Booking Details</h2>
+        <p>Car Type & Model: {{ booking.car_type }}</p>
+        <p>Plate Number: {{ booking.plate_number }}</p>
+        <p>Time Booked: {{ booking.booking_time }} hours</p>
+        <a href="{{ url_for('cancel_booking', booking_id=booking.id) }}">Cancel Booking</a>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

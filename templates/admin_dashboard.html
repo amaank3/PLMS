@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <ul>
+        {% for booking in bookings %}
+            <li>
+                {{ booking.car_type }} - {{ booking.plate_number }} - 
+                Time Booked: {{ booking.booking_time }} hours - 
+                <a href="{{ url_for('cancel_booking', booking_id=booking.id) }}">Cancel Booking</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Sign Out</a>
+</body>
+</html>
+
