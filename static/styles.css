@@ -1,68 +1,138 @@
+/* Set base font and background color for the entire page */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f7f8fa;
+    color: #333;
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0; /* Light grey background */
 }
 
+/* Container for all content to center and constrain width */
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: auto;
-    overflow: hidden;
-}
-
-.header, .footer {
-    background-color: #333; /* Dark background for header/footer */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.header a, .footer a {
-    color: #fff; /* White text for links */
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.main-info {
-    background-color: #fff; /* White background for main content */
-    color: #333; /* Dark text color */
     padding: 20px;
-    margin-top: 20px;
+}
+
+/* Style the header */
+.header {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation links within header */
+.header .nav-button {
+    background-color: transparent;
+    color: #007aff; /* Apple blue */
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #007aff;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.header .nav-button:hover {
+    background-color: #007aff;
+    color: #fff;
+}
+
+/* Style main content area */
+.main-info {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
 }
 
 .main-info h1 {
-    color: #333;
-    font-size: 2em;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
 }
 
 .main-info p {
     font-size: 1.2em;
+    color: #666;
 }
 
-/* Circular containers for location/contact */
+/* Styling for form elements */
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="submit"],
+button {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin: 10px 0;
+    width: calc(100% - 22px); /* Account for padding and borders */
+}
+
+input[type="submit"],
+button {
+    background-color: #007aff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    opacity: 0.9;
+}
+
+/* Footer with a light touch */
+.footer {
+    background-color: #fff;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Circle containers for location/contact */
 .circle-container {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .circle {
     border-radius: 50%;
     width: 200px;
     height: 200px;
+    background-color: #fff;
+    color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333;
-    color: white;
-    font-size: 1.2em;
-    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.circle a {
-    color: white;
-    text-decoration: none;
+.circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .circle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .circle {
+        margin-bottom: 20px;
+    }
+}
+
